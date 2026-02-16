@@ -8,24 +8,22 @@ The objective of the **PalindromeChecker App** is to design and implement a
 palindrome under different conditions, while strengthening **core programming
 fundamentals** and **data structure concepts**.
 
-# UC4 – Character Array Based Palindrome Check
+# UC5 – Stack Based Palindrome Checker
 
 ## 📌 Overview
 This use case demonstrates how to check whether a given string is a **palindrome**
-using two different approaches:
-1. **String Reverse Comparison**
-2. **Character Array with Two-Pointer Technique**
+using a **Stack data structure** in Java.
 
-The program is implemented as a **console-based Java application** and focuses on
-strengthening understanding of **strings, arrays, loops, and logical thinking**.
+The program follows the **LIFO (Last In First Out)** principle of Stack to reverse
+the input string logically and compare it with the original sequence.
 
 ---
 
 ## 🎯 Objective
 - To check whether a given string is a palindrome
-- To reverse a string and compare it with the original string
-- To convert a string into a character array (`char[]`)
-- To compare characters using the **two-pointer technique**
+- To implement palindrome validation using **Stack**
+- To understand stack operations (`push`, `pop`)
+- To strengthen knowledge of **data structures** and **string manipulation**
 - To display the result on the console
 
 ---
@@ -36,53 +34,58 @@ A **palindrome** is a word or string that reads the same forward and backward.
 ### Examples:
 - `madam`
 - `level`
+- `noon`
 - `radar`
+
+---
+
+## 🧠 Description
+In this use case:
+- Characters of the input string are pushed into a stack
+- Characters are popped from the stack in reverse order
+- Each popped character is compared with the original string
+- If all characters match, the string is a palindrome
 
 ---
 
 ## 🔄 Program Flow
 1. Define the input string
-2. Reverse the string using a `for` loop
-3. Compare the original and reversed strings using `equals()`
-4. Convert the input string into a character array
-5. Initialize two pointers (`start` and `end`)
-6. Compare characters at both pointers
-7. Move pointers inward until they cross
-8. Display whether the string is a palindrome
+2. Convert the string into a `char[]` array
+3. Push each character into a `Stack`
+4. Pop characters one by one from the stack
+5. Compare popped characters with the original array
+6. If any mismatch occurs, mark as not a palindrome
+7. Display the final result
 
 ---
 
 ## 🧱 Data Structures Used
-- `String`
-- `char[]` (Character Array)
+- `char[]` – to store characters of the string
+- `Stack<Character>` – to reverse characters using LIFO order
 
 ---
 
 ## 🧠 Key Concepts Covered
-- Java Class and `main()` Method
-- Static Method Execution
-- String Immutability
-- String Concatenation (`+`)
-- `equals()` Method
+- Stack Data Structure
+- LIFO Principle
+- Stack Operations (`push`, `pop`)
 - Character Arrays
-- Array Indexing
-- Two-Pointer Technique
-- Conditional Statements (`if-else`)
 - Looping (`for`, `while`)
+- Conditional Statements (`if`)
 - Time Complexity Awareness – **O(n)**
 - Console Output (`System.out.println`)
 
 ---
 
-## ⚠️ Important Note
-- String concatenation inside a loop creates **multiple String objects**
-  due to **String immutability**.
-- This approach is intentionally used **for learning purposes**.
-- Optimized approaches (like `StringBuilder`) are not used here.
+## ⚠️ Important Notes
+- Stack is used here to demonstrate **reversal logic**
+- This approach is used for **learning purposes**
+- More optimized solutions exist, but are intentionally not used
+- Focus is on understanding **data structures**, not performance tuning
 
 ---
 
 ## ▶️ How to Run the Program
 1. Compile the Java file:
    ```bash
-   javac PalindromeCheckerApp.java
+   javac UseCase5PalindromeCheckerApp.java
