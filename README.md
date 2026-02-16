@@ -1,28 +1,38 @@
 
 # PalindromeCheckerAppManagementSystem
 
-# UC8 – LinkedList Based Palindrome Checker
+# 🚀 Palindrome Checker App
+
+The **Palindrome Checker App** is a console-based Java application designed to
+validate whether a given string is a **palindrome** using multiple approaches.
+
+This project strengthens **core Java fundamentals**, **string handling**, and
+**data structure concepts** through **progressive use cases**.
+
+---
+
+# UC9 – Recursive Palindrome Checker
 
 ## 📌 Overview
-UC8 demonstrates how to check whether a given string is a **palindrome**
-using a **LinkedList** in Java.
+UC9 demonstrates how to check whether a given string is a **palindrome**
+using **recursion** in Java.
 
-This approach uses **double-ended operations** provided by `LinkedList`
-to compare characters from both ends without reversing the string.
+The program accepts user input from the console and validates the string
+by comparing characters from the beginning and the end recursively.
 
 ---
 
 ## 🎯 Objective
 - To check whether a given string is a palindrome
-- To use **LinkedList** for symmetric comparison
-- To understand how `removeFirst()` and `removeLast()` work
-- To strengthen knowledge of Java Collections
+- To understand **recursion** and base conditions
+- To practice string handling in Java
+- To accept user input using `Scanner`
+- To display the result on the console
 
 ---
 
 ## 📖 What is a Palindrome?
-A **palindrome** is a word or string that reads the same
-forward and backward.
+A **palindrome** is a word or string that reads the same forward and backward.
 
 ### Examples:
 - `level`
@@ -34,60 +44,48 @@ forward and backward.
 
 ## 🧠 Description
 In this use case:
-- Each character of the input string is added to a `LinkedList`
-- Characters are removed from the **front** and **rear**
-- Removed characters are compared
+- The user enters a string through the console
+- The input is normalized (spaces removed and case ignored)
+- A recursive method compares characters from both ends
+- On each recursive call, the comparison moves inward
 - If all characters match, the string is a palindrome
-
-This avoids explicit string reversal and enables
-**efficient bidirectional comparison**.
 
 ---
 
 ## 🔄 Program Flow
 1. Program starts
-2. Input string is declared and initialized
-3. Characters are added to a `LinkedList`
-4. First and last elements are removed
-5. Removed characters are compared
-6. Process continues until the list size is less than or equal to 1
+2. User enters a string
+3. Input string is normalized
+4. Recursive function is called with start and end indexes
+5. Characters at both ends are compared
+6. Recursive calls continue until base condition is met
 7. Result is displayed on the console
 8. Program ends
 
 ---
 
-## 🧱 Data Structure Used
-- `LinkedList<Character>`
+## 🧱 Technique Used
+- **Recursion**
+- Character comparison using indexes
 
 ---
 
 ## 🧠 Key Concepts Covered
-- LinkedList
-- Double-ended operations
-- `add()`
-- `removeFirst()`
-- `removeLast()`
-- Looping (`while`)
-- Conditional Statements (`if`)
+- Recursion
+- Base conditions in recursion
+- String manipulation
+- User input using `Scanner`
+- Conditional statements (`if`)
+- Console output (`System.out.println`)
 - Time Complexity Awareness – **O(n)**
-- Console Output (`System.out.println`)
 
 ---
 
 ## ⚠️ Important Notes
-- This approach avoids reversing the string
-- It uses LinkedList’s natural support for front and rear access
-- Designed for **learning and clarity**, not micro-optimization
-
----
-
-## ▶️ Sample Input and Output
-
-**Input:**
-
-
-## 🧩 Data Structure Used
-- `Deque<Character>`
+- Recursion stops when all characters are checked
+- If any mismatch is found, recursion returns `false`
+- This approach is used to understand **recursive problem-solving**
+- Not intended for very large strings due to stack limitations
 
 ---
 
