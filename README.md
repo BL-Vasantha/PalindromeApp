@@ -2,69 +2,75 @@
 # PalindromeCheckerAppManagementSystem
 
 
+# 🚀 Palindrome Checker App
 
-The Palindrome Checker App is a console-based Java application designed to validate whether a given string is a palindrome using multiple approaches. This project strengthens core Java fundamentals, string handling, and data structure concepts through progressive use cases.
+The **Palindrome Checker App** is a console-based Java application designed to
+validate whether a given string is a **palindrome** using multiple approaches.
+This project strengthens core Java fundamentals, string handling, and data
+structure concepts through **progressive use cases**.
 
-🔹 UC6: Queue + Stack Based Palindrome Check
-🎯 Objective
-To determine whether a given string is a palindrome using both Queue (FIFO) and Stack (LIFO) data structures. This use case demonstrates the behavioral difference between FIFO and LIFO while validating palindrome logic.
+---
 
-🔄 Application Flow
-Program starts
-Input string is declared and initialized
-A Queue is created (FIFO)
-A Stack is created (LIFO)
-Each character is inserted into both queue and stack
-Characters are removed using dequeue (queue) and pop (stack)
-Dequeue and pop values are compared
-If all characters match, it is a palindrome
-Result is displayed on the console
-Program exits
-🧠 Key Concepts Used
-Queue Data Structure
-Follows First In First Out (FIFO) principle.
+## 🔹 UC7 – Deque-Based Optimized Palindrome Check
 
-Stack Data Structure
-Follows Last In First Out (LIFO) principle.
+### 🎯 Objective
+To determine whether a given string is a palindrome using a  
+**Deque (Double Ended Queue)**.
 
-Enqueue Operation (queue.add())
-Inserts elements into the queue.
+This approach compares characters from **both ends efficiently** without
+reversing the string, making it more optimized than earlier methods.
 
-Dequeue Operation (queue.remove())
-Removes elements from the front of the queue.
+---
 
-Push Operation (stack.push())
-Inserts elements into the stack.
+## 🔄 Application Flow
+1. Program starts
+2. Input string is declared and initialized
+3. A Deque is created
+4. Each character of the string is inserted into the Deque
+5. First and last characters are removed
+6. Removed characters are compared
+7. The process continues until all characters are checked
+8. If all characters match, the string is a palindrome
+9. Result is displayed on the console
+10. Program exits
 
-Pop Operation (stack.pop())
-Removes elements from the top of the stack.
+---
 
-Logical Comparison
-Matching dequeue (FIFO) output with pop (LIFO) output validates palindrome logic.
+## 🧠 Key Concepts Used
 
-Time Complexity Awareness
-Time Complexity: O(n)
-Space Complexity: O(n)
+### Deque Data Structure
+A **Double Ended Queue** that allows insertion and deletion from both
+the front and the rear.
 
-Console Output
-System.out.println() is used to display results.
+### addLast() Operation
+Inserts characters at the **rear** of the deque.
 
-🧩 Data Structures Used
-Queue
-Stack
-▶️ Sample Input and Output
-Input: civic
+### removeFirst() Operation
+Removes characters from the **front** of the deque.
 
-Output: Input : civic Is Palindrome? : true
+### removeLast() Operation
+Removes characters from the **rear** of the deque.
 
-⚙️ How to Compile and Run
-Compile: javac UseCase6PalindromeCheckerApp.java
+### Bidirectional Comparison
+Enables direct comparison of first and last characters efficiently.
 
-Run: java UseCase6PalindromeCheckerApp
+### Optimized Approach
+Eliminates the need for separate reversal structures such as **Stack**.
 
-📚 Learning Outcome
-Understanding FIFO vs LIFO behavior
-Comparing Queue and Stack operations
-Applying data structures to solve real problems
-Strengthening Java collections knowledge
-Deepening understanding of palindrome validation logic
+### Time Complexity Awareness
+- **Time Complexity:** O(n)
+- **Space Complexity:** O(n)
+
+### Console Output
+Uses `System.out.println()` to display results.
+
+---
+
+## 🧩 Data Structure Used
+- `Deque<Character>`
+
+---
+
+## ▶️ Sample Input and Output
+
+**Input:**
