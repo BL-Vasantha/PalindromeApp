@@ -1,84 +1,97 @@
-
 /**
+ * UC3 - Palindrome Check Using String Reverse
  * ============================================================
  *
- * UC2 - Print a Hardcoded Palindrome Result
- * ============================================================
- *
- * This class is the entry point of the application.
- * It only displays a welcome message and version details.
- * No palindrome logic is implemented at this stage.
  * Objective:
- * To check whether a hardcoded string is a palindrome
- * and display the result on the console.
+ * - To check whether a hardcoded string is a palindrome
+ * - To reverse a string and compare it with the original string
+ * - To display the result on the console
  *
- * A palindrome is a string that reads the same
- * forward and backward (example: "madam").
+ * Definition:
+ * A palindrome is a string that reads the same forward
+ * and backward (example: "madam").
  *
  * Data Structure Used:
- * String
+ * - String
  *
- * Key Concepts:
- * - Class
- * - Main Method
+ * Key Concepts Covered:
+ * - Class and Main Method
  * - Static Keyword
- * - String & String Literal
- * - Conditional Statement (if-else)
- * - Loop (for)
+ * - String and String Literals
+ * - Conditional Statements (if-else)
+ * - for Loop
+ * - String Immutability
+ * - String Concatenation (+)
+ * - equals() method
  * - Console Output
  *
- * @author Vasantha .R
+ * Note:
+ * - String concatenation inside a loop creates multiple
+ *   String objects due to String immutability.
+ * - This approach is intentionally used for learning purposes.
  *
- * @version 2.0
+ * @author  Vasantha R.
+ * @version 3.0
  */
-
-// Declares a public class named PalindromeCheckerApp
 public class PalindromeCheckerApp {
 
     /**
-     * main() method – program execution starts here
      * Main method – Entry point of the Java application.
      * The JVM invokes this method without creating
      * an object of the class because it is static.
      *
-     * @param args Command-line arguments (not used here)
      * @param args Command-line arguments
      */
-
-    // JVM starts execution from this method
     public static void main(String[] args) {
 
-        // Prints a separator line on the console
-        System.out.println("====================================");
         // Hardcoded string literal to be checked
         String input = "madam";
 
-        // Prints the welcome message
-        System.out.println("  Welcome to Palindrome Checker Management System ");
+        // Original string for reverse comparison
+        String original = "madam";
+
         // Boolean flag to track palindrome status
         boolean isPalindrome = true;
 
-        // Prints the application version
-        System.out.println("  Application Version : 1.0");
-        // Loop only till half of the string length
-        // This improves performance by avoiding full reversal
+        /*
+         * Loop only till half of the string length.
+         * This improves performance by avoiding
+         * unnecessary full traversal.
+         */
         for (int i = 0; i < input.length() / 2; i++) {
 
-            // Prints another separator line
-            System.out.println("====================================");
+            // Variable to store reversed string
+            String reversed = "";
+
             // Compare characters from beginning and end
             if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
                 isPalindrome = false; // Not a palindrome
-                break;               // Exit loop early on mismatch
+                break;                // Exit loop early on mismatch
+            }
+
+            // Reverse the string using a for loop
+            for (int j = original.length() - 1; j >= 0; j--) {
+                // Concatenate characters in reverse order
+                reversed = reversed + original.charAt(j);
+            }
+
+            // Display input and palindrome status
+            System.out.println("Input text: " + input);
+            System.out.println("Is it a Palindrome? : " + isPalindrome);
+
+            // Compare original and reversed strings using equals()
+            if (original.equals(reversed)) {
+
+                // If both strings are equal, it is a palindrome
+                System.out.println("Input text: " + original);
+                System.out.println("Is it a Palindrome? : true");
+
+            } else {
+
+                // If both strings are not equal, it is not a palindrome
+                System.out.println("Input text: " + original);
+                System.out.println("Is it a Palindrome? : false");
             }
         }
-
-        // Confirms that the system started successfully
-        System.out.println(" System Initialized Successfully.");
-        // Display input and result
-        System.out.println("Input text: " + input);
-        System.out.println("Is it a Palindrome? : " + isPalindrome);
-
-    } // End of main method
-
-} // End of class
+    }
+}
