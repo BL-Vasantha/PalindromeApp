@@ -2,90 +2,69 @@
 # PalindromeCheckerAppManagementSystem
 
 
-## 📌 Objective
-The objective of the **PalindromeChecker App** is to design and implement a
-**console-based Java application** that validates whether a given string is a
-palindrome under different conditions, while strengthening **core programming
-fundamentals** and **data structure concepts**.
 
-# UC5 – Stack Based Palindrome Checker
+The Palindrome Checker App is a console-based Java application designed to validate whether a given string is a palindrome using multiple approaches. This project strengthens core Java fundamentals, string handling, and data structure concepts through progressive use cases.
 
-## 📌 Overview
-This use case demonstrates how to check whether a given string is a **palindrome**
-using a **Stack data structure** in Java.
+🔹 UC6: Queue + Stack Based Palindrome Check
+🎯 Objective
+To determine whether a given string is a palindrome using both Queue (FIFO) and Stack (LIFO) data structures. This use case demonstrates the behavioral difference between FIFO and LIFO while validating palindrome logic.
 
-The program follows the **LIFO (Last In First Out)** principle of Stack to reverse
-the input string logically and compare it with the original sequence.
+🔄 Application Flow
+Program starts
+Input string is declared and initialized
+A Queue is created (FIFO)
+A Stack is created (LIFO)
+Each character is inserted into both queue and stack
+Characters are removed using dequeue (queue) and pop (stack)
+Dequeue and pop values are compared
+If all characters match, it is a palindrome
+Result is displayed on the console
+Program exits
+🧠 Key Concepts Used
+Queue Data Structure
+Follows First In First Out (FIFO) principle.
 
----
+Stack Data Structure
+Follows Last In First Out (LIFO) principle.
 
-## 🎯 Objective
-- To check whether a given string is a palindrome
-- To implement palindrome validation using **Stack**
-- To understand stack operations (`push`, `pop`)
-- To strengthen knowledge of **data structures** and **string manipulation**
-- To display the result on the console
+Enqueue Operation (queue.add())
+Inserts elements into the queue.
 
----
+Dequeue Operation (queue.remove())
+Removes elements from the front of the queue.
 
-## 📖 What is a Palindrome?
-A **palindrome** is a word or string that reads the same forward and backward.
+Push Operation (stack.push())
+Inserts elements into the stack.
 
-### Examples:
-- `madam`
-- `level`
-- `noon`
-- `radar`
+Pop Operation (stack.pop())
+Removes elements from the top of the stack.
 
----
+Logical Comparison
+Matching dequeue (FIFO) output with pop (LIFO) output validates palindrome logic.
 
-## 🧠 Description
-In this use case:
-- Characters of the input string are pushed into a stack
-- Characters are popped from the stack in reverse order
-- Each popped character is compared with the original string
-- If all characters match, the string is a palindrome
+Time Complexity Awareness
+Time Complexity: O(n)
+Space Complexity: O(n)
 
----
+Console Output
+System.out.println() is used to display results.
 
-## 🔄 Program Flow
-1. Define the input string
-2. Convert the string into a `char[]` array
-3. Push each character into a `Stack`
-4. Pop characters one by one from the stack
-5. Compare popped characters with the original array
-6. If any mismatch occurs, mark as not a palindrome
-7. Display the final result
+🧩 Data Structures Used
+Queue
+Stack
+▶️ Sample Input and Output
+Input: civic
 
----
+Output: Input : civic Is Palindrome? : true
 
-## 🧱 Data Structures Used
-- `char[]` – to store characters of the string
-- `Stack<Character>` – to reverse characters using LIFO order
+⚙️ How to Compile and Run
+Compile: javac UseCase6PalindromeCheckerApp.java
 
----
+Run: java UseCase6PalindromeCheckerApp
 
-## 🧠 Key Concepts Covered
-- Stack Data Structure
-- LIFO Principle
-- Stack Operations (`push`, `pop`)
-- Character Arrays
-- Looping (`for`, `while`)
-- Conditional Statements (`if`)
-- Time Complexity Awareness – **O(n)**
-- Console Output (`System.out.println`)
-
----
-
-## ⚠️ Important Notes
-- Stack is used here to demonstrate **reversal logic**
-- This approach is used for **learning purposes**
-- More optimized solutions exist, but are intentionally not used
-- Focus is on understanding **data structures**, not performance tuning
-
----
-
-## ▶️ How to Run the Program
-1. Compile the Java file:
-   ```bash
-   javac UseCase5PalindromeCheckerApp.java
+📚 Learning Outcome
+Understanding FIFO vs LIFO behavior
+Comparing Queue and Stack operations
+Applying data structures to solve real problems
+Strengthening Java collections knowledge
+Deepening understanding of palindrome validation logic
