@@ -1,76 +1,94 @@
 
 # PalindromeCheckerAppManagementSystem
 
+# UC8 – LinkedList Based Palindrome Checker
 
-# 🚀 Palindrome Checker App
+## 📌 Overview
+UC8 demonstrates how to check whether a given string is a **palindrome**
+using a **LinkedList** in Java.
 
-The **Palindrome Checker App** is a console-based Java application designed to
-validate whether a given string is a **palindrome** using multiple approaches.
-This project strengthens core Java fundamentals, string handling, and data
-structure concepts through **progressive use cases**.
-
----
-
-## 🔹 UC7 – Deque-Based Optimized Palindrome Check
-
-### 🎯 Objective
-To determine whether a given string is a palindrome using a  
-**Deque (Double Ended Queue)**.
-
-This approach compares characters from **both ends efficiently** without
-reversing the string, making it more optimized than earlier methods.
+This approach uses **double-ended operations** provided by `LinkedList`
+to compare characters from both ends without reversing the string.
 
 ---
 
-## 🔄 Application Flow
+## 🎯 Objective
+- To check whether a given string is a palindrome
+- To use **LinkedList** for symmetric comparison
+- To understand how `removeFirst()` and `removeLast()` work
+- To strengthen knowledge of Java Collections
+
+---
+
+## 📖 What is a Palindrome?
+A **palindrome** is a word or string that reads the same
+forward and backward.
+
+### Examples:
+- `level`
+- `madam`
+- `refer`
+- `noon`
+
+---
+
+## 🧠 Description
+In this use case:
+- Each character of the input string is added to a `LinkedList`
+- Characters are removed from the **front** and **rear**
+- Removed characters are compared
+- If all characters match, the string is a palindrome
+
+This avoids explicit string reversal and enables
+**efficient bidirectional comparison**.
+
+---
+
+## 🔄 Program Flow
 1. Program starts
 2. Input string is declared and initialized
-3. A Deque is created
-4. Each character of the string is inserted into the Deque
-5. First and last characters are removed
-6. Removed characters are compared
-7. The process continues until all characters are checked
-8. If all characters match, the string is a palindrome
-9. Result is displayed on the console
-10. Program exits
+3. Characters are added to a `LinkedList`
+4. First and last elements are removed
+5. Removed characters are compared
+6. Process continues until the list size is less than or equal to 1
+7. Result is displayed on the console
+8. Program ends
 
 ---
 
-## 🧠 Key Concepts Used
-
-### Deque Data Structure
-A **Double Ended Queue** that allows insertion and deletion from both
-the front and the rear.
-
-### addLast() Operation
-Inserts characters at the **rear** of the deque.
-
-### removeFirst() Operation
-Removes characters from the **front** of the deque.
-
-### removeLast() Operation
-Removes characters from the **rear** of the deque.
-
-### Bidirectional Comparison
-Enables direct comparison of first and last characters efficiently.
-
-### Optimized Approach
-Eliminates the need for separate reversal structures such as **Stack**.
-
-### Time Complexity Awareness
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(n)
-
-### Console Output
-Uses `System.out.println()` to display results.
+## 🧱 Data Structure Used
+- `LinkedList<Character>`
 
 ---
 
-## 🧩 Data Structure Used
-- `Deque<Character>`
+## 🧠 Key Concepts Covered
+- LinkedList
+- Double-ended operations
+- `add()`
+- `removeFirst()`
+- `removeLast()`
+- Looping (`while`)
+- Conditional Statements (`if`)
+- Time Complexity Awareness – **O(n)**
+- Console Output (`System.out.println`)
+
+---
+
+## ⚠️ Important Notes
+- This approach avoids reversing the string
+- It uses LinkedList’s natural support for front and rear access
+- Designed for **learning and clarity**, not micro-optimization
 
 ---
 
 ## ▶️ Sample Input and Output
 
 **Input:**
+
+
+## 🧩 Data Structure Used
+- `Deque<Character>`
+
+---
+
+
